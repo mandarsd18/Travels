@@ -30,7 +30,7 @@ const Form = ({ data }) => {
       } else {
         const {
           data: { order },
-        } = await axios.post("http://localhost:4000/api/checkout", {
+        } = await axios.post("https://travels-2dxq.onrender.com/api/checkout", {
           amount:1,
           
         });
@@ -46,15 +46,15 @@ const Form = ({ data }) => {
             "https://img.freepik.com/free-vector/detailed-travel-logo-theme_23-2148630535.jpg",
           order_id: order.id,
           handler: async function (response) {
-            await axios.post("http://localhost:4000/api/paymentverification", {
+            await axios.post("https://travels-2dxq.onrender.com/api/paymentverification", {
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_order_id: response.razorpay_order_id,
               signature: response.razorpay_signature,
             });
           },
           prefill: {
-            name: "Gaurav Kumar",
-            email: "gaurav.kumar@example.com",
+            name: "Travels",
+            email: "Travels@example.com",
             contact: "9000090000",
           },
           notes: {

@@ -5,7 +5,7 @@ import axios from "axios";
 const Tours = () => {
   const [data, setData] = useState([]);
   const getAllTour = async () => {
-    const res = await axios.get("http://localhost:4000/tour/all-tour");
+    const res = await axios.get("https://travels-2dxq.onrender.com/tour/all-tour");
     setData(res.data);
   };
  

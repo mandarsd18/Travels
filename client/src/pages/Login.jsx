@@ -15,7 +15,7 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:4000/auth/user/login", {
+      const res = await axios.post("https://travels-2dxq.onrender.com/auth/user/login", {
         email,
         password,
       });

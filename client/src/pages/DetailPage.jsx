@@ -10,7 +10,7 @@ const DetailPage = () => {
   
 
   const getSingleData = async () => {
-    const res = await axios.get(`http://localhost:4000/tour/${id}`);
+    const res = await axios.get(`https://travels-2dxq.onrender.com/tour/${id}`);
     setData(res.data.singleTour);
     
   };
